@@ -1,0 +1,32 @@
+{
+    "company" : "(주) 엑셈(EXEM Inc.)",
+    "period": "2023-07-10 ~ 2023-12-15",
+    "month": 6,
+    "position": "인턴",
+    "tech" : [
+        "JavaScript",
+        "TypeScript",
+        "Playwright",
+        "Storybook"
+    ],
+    "detail" : [
+        {
+            "period" : "2023-11-01 ~ 2023-12-15",
+            "description": "조직 개편으로 인한 통합개발본부 플랫폼 3팀 편성",
+            "work": "빅데이터 시스템 구축 솔루션 EBIGs 반응형 UI 컴포넌트 개발",
+            "result" : [
+                "동적 데이터 시각화로 사용자 경험 증진",
+                "메모리 사용량 절감"
+            ]
+        },
+        {
+            "period" : "2023-07-10 ~ 2023-10-31",
+            "description": "개발2본부 FE팀 입사",
+            "work": "풀스택 모니터링 SaaS 솔루션 DataSaker E2E 테스트 자동화 구축",
+            "result" : [
+                "테스트 수행 시간 10배 절감 (40분 이상 소요 -> 4분 30초)",
+                "서비스 온보딩 과정에서 오류 발생률 절감"
+            ]
+        }
+    ]
+}
