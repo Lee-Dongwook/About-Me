@@ -1,0 +1,9 @@
+{
+	"jsxSingleQuote": true,
+	"semi": true,
+	"printWidth": 100,
+	"proseWrap": "never",
+	"singleQuote": true,
+	"htmlWhitespaceSensitivity": "css",
+	"endOfLine": "lf"
+  }
