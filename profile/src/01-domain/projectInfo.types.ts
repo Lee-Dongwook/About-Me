@@ -15,8 +15,15 @@ type TeamTechSkillInfo = {
 }
 
 type RefactorTeamTechSkillInfo = {
-    first?: TeamTechSkillInfo
-    second?: TeamTechSkillInfo
+    first: TeamTechSkillInfo
+    second: TeamTechSkillInfo
+}
+
+type SoloTechSkillInfo = {
+    FE?: string[]
+    BE?: string[]
+    DB?: string[]
+    DevOps?: string[]
 }
 
 interface TeamProjectInfo {
@@ -29,7 +36,11 @@ interface TeamProjectInfo {
 }
 
 interface SoloProjectInfo {
-
+    name: string
+    description: string
+    period: string | string[]
+    Skills: SoloTechSkillInfo
+    Functions: string[]
 }
 
 export interface ProjectInfoList {

@@ -74,20 +74,36 @@
             "BE": ["Node.JS", "Express"],
             "DB": ["MongoDB"]
         },
-        "Functions": {
-            
-        }
+        "Functions": []
     }
   ],
   "Solo": [
     {
+        "name": "",
+        "description": "",
+        "period": "",
+        "Skills": {
 
+        },
+        "Functions": []
     },
     {
-
+        "name": "",
+        "description": "",
+        "period": "",
+        "Skills": {
+            
+        },
+        "Functions": []
     },
     {
-
+        "name": "",
+        "description": "",
+        "period": "",
+        "Skills": {
+            
+        },
+        "Functions": []
     }
   ]
 }
