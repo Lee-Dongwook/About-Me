@@ -1,95 +1,112 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import type { BasicInfo, ProjectInfoList, TechSkillInfoList } from '@/01-domain';
+import {
+  getActivityInfoList,
+  getBasicInfo,
+  getCertificateInfoList,
+  getProjectInfoList,
+  getTechSkillInfoList,
+  getWorkExperienceInfoList,
+} from '@/02-application';
 
-export default function Home() {
+const Page = async () => {
+  const activityInfo = await getActivityInfoList();
+  const { birthday, age, email, phone, github, blog }: BasicInfo = await getBasicInfo();
+  const certificateInfo = await getCertificateInfoList();
+  const { Team, Solo }: ProjectInfoList = await getProjectInfoList();
+  const { FE, BE, DevOps, Communication }: TechSkillInfoList = await getTechSkillInfoList();
+  const workExperienceInfo = await getWorkExperienceInfoList();
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <>
+      <main>
+        <ul>
+          <li>{birthday}</li>
+          <li>{age}</li>
+          <li>{email}</li>
+          <li>{phone}</li>
+          <li>{github}</li>
+          <li>{blog}</li>
+        </ul>
+        <br />
+        <ul>{'자기 소개 부분'}</ul>
+        <br />
+        {workExperienceInfo.map((work) => {
+          return (
+            <ul key={work.company}>
+              <li>{work.company}</li>
+              <li>{work.position}</li>
+              <li>{work.month}</li>
+              <li>{work.tech}</li>
+              <li>
+                {work.detail.map((item) => {
+                  return <li key={item.work}>{item.work}</li>;
+                })}
+              </li>
+            </ul>
+          );
+        })}
+        <br />
+        {Team.map((item) => {
+          return <li key={item.name}>{item.name}</li>;
+        })}
+        <br />
+        {Solo.map((item) => {
+          return <li key={item.name}>{item.name}</li>;
+        })}
+        <br />
+        {FE.Language.map((item) => {
+          return <li key={item.name}>{item.name}</li>;
+        })}
+        {FE.LibraryOrFramework.map((item) => {
+          return <li key={item.name}>{item.name}</li>;
+        })}
+        {FE.Style.map((item) => {
+          return <li key={item.name}>{item.name}</li>;
+        })}
+        {FE.Test.map((item) => {
+          return <li key={item.name}>{item.name}</li>;
+        })}
+        {FE.Format.map((item) => {
+          return <li key={item.name}>{item.name}</li>;
+        })}
+        {BE.Language.map((item) => {
+          return <li key={item.name}>{item.name}</li>;
+        })}
+        {BE.LibraryOrFramework.map((item) => {
+          return <li key={item.name}>{item.name}</li>;
+        })}
+        {BE.Database.map((item) => {
+          return <li key={item.name}>{item.name}</li>;
+        })}
+        {DevOps.map((item) => {
+          return <li key={item.name}>{item.name}</li>;
+        })}
+        {Communication.map((item) => {
+          return <li key={item.name}>{item.name}</li>;
+        })}
+        <br />
+        {activityInfo.map((activity) => {
+          return (
+            <>
+              <div>{activity.name}</div>
+              <div>{activity.period}</div>
+              <div>{activity.description ? activity.description : null}</div>
+            </>
+          );
+        })}
+        <br />
+        {certificateInfo.map((certificate) => {
+          return (
+            <>
+              <div>{certificate.title}</div>
+              <div>{certificate.id}</div>
+              <div>{certificate.date}</div>
+            </>
+          );
+        })}
+      </main>
+    </>
+  );
+};
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+export default Page;
