@@ -7,8 +7,8 @@ type Props = {
   projectInfo: TeamProjectInfo[] | SoloProjectInfo[];
 };
 
-const isTeamProjectInfo = (projectInfo: TeamProjectInfo): projectInfo is TeamProjectInfo => {
-  return projectInfo.member !== undefined;
+const isTeamProjectInfo = (projectInfo: any): projectInfo is TeamProjectInfo => {
+  return (projectInfo as TeamProjectInfo) !== undefined;
 };
 
 export const ProjectInfoCard = ({ projectInfo }: Props) => {
