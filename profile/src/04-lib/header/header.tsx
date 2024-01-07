@@ -6,10 +6,12 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <Navigation>
-        <Logo>Lee Dong Wook</Logo>
         <Navbar>
           <NavItem>
             <Link href={'/'}>Home</Link>
+          </NavItem>
+          <NavItem>
+            <Link href={'/about'}>About</Link>
           </NavItem>
           <NavItem>
             <Link href={'/project'}>Projects</Link>
@@ -30,15 +32,14 @@ export const Header = () => {
 };
 
 const HeaderContainer = styled.header`
-  background-color: skyblue;
-  border-radius: 10px;
-  color: white;
+  background-color: transparent;
+  color: black;
   padding: 16px;
 `;
 
 const Navigation = styled.nav`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `;
 
@@ -56,7 +57,7 @@ const NavItem = styled.li`
   margin-right: 16px;
 
   a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-weight: bold;
 

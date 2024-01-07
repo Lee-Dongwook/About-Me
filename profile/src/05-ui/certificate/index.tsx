@@ -8,22 +8,22 @@ type Props = {
 
 export const CertificateInfoComponent = ({ certificateInfo }: Props) => {
   return (
-    <CardContainer>
+    <div>
+      <h3>Certificate</h3>
       <div>
-        <h3>Certificate</h3>
-        <div>
-          {certificateInfo.map((item, index) => {
-            return (
-              <p key={index}>
-                {item.title}
-                {item.id}
-                {item.date}
-              </p>
-            );
-          })}
-        </div>
+        {certificateInfo.map((item, index) => {
+          return (
+            <CardContainer key={index}>
+              <div>
+                <h4>{item.title}</h4>
+                <h5>{item.id}</h5>
+                <h5>{item.date}</h5>
+              </div>
+            </CardContainer>
+          );
+        })}
       </div>
-    </CardContainer>
+    </div>
   );
 };
 

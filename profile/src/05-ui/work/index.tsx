@@ -11,11 +11,30 @@ export const WorkExperienceInfoComponent = ({ workExperienceInfo }: Props) => {
     <CardContainer>
       <div>
         <h3>Work Experience</h3>
-        {workExperienceInfo.map((work) => {
+        {workExperienceInfo.map((work, index) => {
           return (
-            <div>
+            <div key={index}>
               <p>Company: {work.company}</p>
               <p>Position: {work.position}</p>
+              <p>
+                Period: {work.period} ({work.month}개월)
+              </p>
+              <p>Tech Skill : {work.tech.join(' / ')}</p>
+              <hr />
+              <div>
+                Detail Tasks
+                {work.detail.map((task, idx) => {
+                  return (
+                    <div key={idx}>
+                      <p>{task.period}</p>
+                      <p>{task.description}</p>
+                      <p>{task.work}</p>
+                      <p>{task.result.join(' / ')}</p>
+                      <hr />
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           );
         })}
