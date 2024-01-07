@@ -1,4 +1,4 @@
-import { ProfileCard, IntroduceInfoCard } from './card';
+import { ProfileCard, IntroduceInfoCard, CertificateInfoCard } from './card';
 import { Header } from './header';
 
-export { ProfileCard, IntroduceInfoCard , Header };
+export { ProfileCard, IntroduceInfoCard, CertificateInfoCard, Header };

@@ -1,4 +1,5 @@
 import type { CertificateInfoList } from '@/01-domain';
+import { CertificateInfoCard } from '@/04-lib';
 
 type Props = {
   certificateInfo: CertificateInfoList;
@@ -7,15 +8,7 @@ type Props = {
 export const CertificateInfoComponent = ({ certificateInfo }: Props) => {
   return (
     <>
-      {certificateInfo.map((certificate) => {
-        return (
-          <>
-            <div>{certificate.title}</div>
-            <div>{certificate.id}</div>
-            <div>{certificate.date}</div>
-          </>
-        );
-      })}
+      <CertificateInfoCard certificateInfo={certificateInfo} />
     </>
   );
 };
