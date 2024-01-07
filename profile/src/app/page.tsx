@@ -1,5 +1,6 @@
+import { getBasicInfo } from '@/02-application';
 import {
-  BasicInfoComponent,
+  HeaderComponent,
   WorkExperienceInfoComponent,
   ProjectInfoComponent,
   TechSkillInfoListComponent,
@@ -8,10 +9,12 @@ import {
 } from '@/04-ui';
 
 const Page = async () => {
+  const basicInfo = await getBasicInfo();
+
   return (
     <>
+      <HeaderComponent basicInfo={basicInfo} />
       <main>
-        <BasicInfoComponent />
         <ul>{'자기 소개 부분'}</ul>
         <WorkExperienceInfoComponent />
         <ProjectInfoComponent />

@@ -1,4 +1,5 @@
 export interface BasicInfo {
+    name: string
     birthday: string
     age: number
     email: string
