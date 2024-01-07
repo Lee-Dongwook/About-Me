@@ -1,15 +1,15 @@
-import type { ProjectInfoList, TechSkillInfoList } from '@/01-domain';
-import { getProjectInfoList, getTechSkillInfoList } from '@/02-application';
+import type { TechSkillInfoList } from '@/01-domain';
+import { getTechSkillInfoList } from '@/02-application';
 
 import {
   BasicInfoComponent,
   WorkExperienceInfoComponent,
+  ProjectInfoComponent,
   ActivityInfoComponent,
   CertificateInfoComponent,
 } from '@/04-ui';
 
 const Page = async () => {
-  const { Team, Solo }: ProjectInfoList = await getProjectInfoList();
   const { FE, BE, DevOps, Communication }: TechSkillInfoList = await getTechSkillInfoList();
   return (
     <>
@@ -20,13 +20,7 @@ const Page = async () => {
         <br />
         <WorkExperienceInfoComponent />
         <br />
-        {Team.map((item) => {
-          return <li key={item.name}>{item.name}</li>;
-        })}
-        <br />
-        {Solo.map((item) => {
-          return <li key={item.name}>{item.name}</li>;
-        })}
+        <ProjectInfoComponent />
         <br />
         {FE.Language.map((item) => {
           return <li key={item.name}>{item.name}</li>;

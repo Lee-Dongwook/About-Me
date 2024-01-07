@@ -26,7 +26,7 @@ type SoloTechSkillInfo = {
     DevOps?: string[]
 }
 
-interface TeamProjectInfo {
+export interface TeamProjectInfo {
     name: string
     description: string
     period: string  | string[]
@@ -35,7 +35,7 @@ interface TeamProjectInfo {
     Functions: string[]
 }
 
-interface SoloProjectInfo {
+export interface SoloProjectInfo {
     name: string
     description: string
     period: string | string[]
