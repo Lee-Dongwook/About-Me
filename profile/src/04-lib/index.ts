@@ -1,4 +1,4 @@
-import { ProfileCard, IntroduceInfoCard, CertificateInfoCard, ActivityInfoCard, ProjectInfoCard } from './card';
+import { ProfileCard, IntroduceInfoCard, CertificateInfoCard, ActivityInfoCard, ProjectInfoCard, WorkExperienceInfoCard } from './card';
 import { Header } from './header';
 import { FrontendTechInfoTable, BackendTechInfoTable, DevOpsTechInfoTable, CommunicationTechInfoTable } from './table';
 
@@ -8,6 +8,7 @@ export {
     CertificateInfoCard, 
     ActivityInfoCard, 
     ProjectInfoCard,
+    WorkExperienceInfoCard,
     Header,
     FrontendTechInfoTable,
     BackendTechInfoTable,

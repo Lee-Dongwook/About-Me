@@ -37,9 +37,9 @@ export const ProfileCard = ({ basicInfo }: Props) => {
 const CardContainer = styled.div`
   display: flex;
   align-items: center;
-  width: 700px;
+  width: 100%;
   border: 1px solid #ccc;
-  padding: 16px;
+  padding: 100px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 16px;

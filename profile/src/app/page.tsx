@@ -1,7 +1,5 @@
 import { getBasicInfo, getIntroduceInfo, getWorkExperienceInfoList } from '@/02-application';
-
 import { Header } from '@/04-lib';
-
 import { BasicComponent, IntroduceComponent, WorkExperienceInfoComponent } from '@/05-ui';
 
 const Page = async () => {
