@@ -1,4 +1,5 @@
-import { IntroduceInfo } from '@/01-domain';
+import type { IntroduceInfo } from '@/01-domain';
+import { IntroduceInfoCard } from '@/04-lib';
 
 interface Props {
   introduceInfo: IntroduceInfo;
@@ -7,18 +8,7 @@ interface Props {
 export const IntroduceComponent = ({ introduceInfo }: Props) => {
   return (
     <div>
-      {introduceInfo.introduce.map((intro) => {
-        return <p>{intro}</p>;
-      })}
-      {introduceInfo.experience.work.map((item) => {
-        return <p>{item}</p>;
-      })}
-      {introduceInfo.experience.practice.map((item) => {
-        return <p>{item}</p>;
-      })}
-      {introduceInfo.keypoint.map((item) => {
-        return <p>{item}</p>;
-      })}
+      <IntroduceInfoCard introduceInfo={introduceInfo} />
     </div>
   );
 };
