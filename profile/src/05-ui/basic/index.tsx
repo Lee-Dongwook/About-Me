@@ -7,10 +7,6 @@ interface Props {
   basicInfo: BasicInfo;
 }
 
-export const HeaderComponent = ({ basicInfo }: Props) => {
-  return (
-    <header>
-      <ProfileCard basicInfo={basicInfo} />
-    </header>
-  );
+export const BasicComponent = ({ basicInfo }: Props) => {
+  return <ProfileCard basicInfo={basicInfo} />;
 };

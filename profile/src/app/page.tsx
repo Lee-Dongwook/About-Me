@@ -8,8 +8,10 @@ import {
   getCertificateInfoList,
 } from '@/02-application';
 
+import { Header } from '@/04-lib';
+
 import {
-  HeaderComponent,
+  BasicComponent,
   IntroduceComponent,
   WorkExperienceInfoComponent,
   ProjectInfoComponent,
@@ -29,8 +31,9 @@ const Page = async () => {
 
   return (
     <>
-      <HeaderComponent basicInfo={basicInfo} />
+      <Header />
       <main>
+        <BasicComponent basicInfo={basicInfo} />
         <IntroduceComponent introduceInfo={introduceInfo} />
         <WorkExperienceInfoComponent workExperienceInfo={workExperienceInfo} />
         <ProjectInfoComponent projectInfo={projectInfo} />

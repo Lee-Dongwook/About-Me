@@ -1,4 +1,4 @@
-import { HeaderComponent } from "./header";
+import { BasicComponent } from "./basic";
 import { IntroduceComponent } from "./introduce";
 import { WorkExperienceInfoComponent } from "./work";
 import { ProjectInfoComponent } from './project';
@@ -7,7 +7,7 @@ import { ActivityInfoComponent } from "./activity";
 import { CertificateInfoComponent } from "./certificate";
 
 export { 
-    HeaderComponent,
+    BasicComponent,
     IntroduceComponent,
     WorkExperienceInfoComponent, 
     ProjectInfoComponent, 

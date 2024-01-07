@@ -1,7 +1,9 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import my from '@/00-assets/image/my.png';
 import type { BasicInfo } from '@/01-domain';
+import styled from 'styled-components';
 
 type Props = {
   basicInfo: BasicInfo;
@@ -9,23 +11,36 @@ type Props = {
 
 export const ProfileCard = ({ basicInfo }: Props) => {
   return (
-    <section>
-      <Image src={my} width={200} height={200} alt='사진' />
+    <CardContainer>
+      <Image src={my} width={250} height={300} alt='사진' />
       <div>
-        <h1>{basicInfo.name}</h1>
-        <h2>{basicInfo.birthday}</h2>
-        <h2>{basicInfo.age}</h2>
-        <h2>{basicInfo.phone}</h2>
-        <h2>
-          <Link href={``}>{basicInfo.email}</Link>
-        </h2>
-        <h2>
-          <Link href={``}>{basicInfo.github}</Link>
-        </h2>
-        <h2>
-          <Link href={``}>{basicInfo.blog}</Link>
-        </h2>
+        <h3> Name: {basicInfo.name}</h3>
+        <h3>
+          {' '}
+          Birth: {basicInfo.birthday} ({basicInfo.age}세)
+        </h3>
+        <h3>Phone: {basicInfo.phone}</h3>
+        <h3>
+          Email : <Link href={`mailto:dlehddnr0713@gmail.com`}>{basicInfo.email}</Link>
+        </h3>
+        <h3>
+          Github : <Link href={``}>{basicInfo.github}</Link>
+        </h3>
+        <h3>
+          Blog : <Link href={``}>{basicInfo.blog}</Link>
+        </h3>
       </div>
-    </section>
+    </CardContainer>
   );
 };
+
+const CardContainer = styled.div`
+  display: flex;
+  align-items: center;
+  width: 700px;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 16px;
+`;
