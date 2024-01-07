@@ -11,26 +11,26 @@ export const IntroduceInfoCard = ({ introduceInfo }: Props) => {
     <CardContainer>
       <div>
         <h3>Introduce</h3>
-        <p>
+        <div>
           {introduceInfo.introduce.map((item, index) => {
             return <p key={index}>{item}</p>;
           })}
-        </p>
-        <p>
+        </div>
+        <div>
           {introduceInfo.experience.work.map((item, index) => {
             return <p key={index}>{item}</p>;
           })}
-        </p>
-        <p>
+        </div>
+        <div>
           {introduceInfo.experience.practice.map((item, index) => {
             return <p key={index}>{item}</p>;
           })}
-        </p>
-        <p>
+        </div>
+        <div>
           {introduceInfo.keypoint.map((item, index) => {
             return <p key={index}>{item}</p>;
           })}
-        </p>
+        </div>
       </div>
     </CardContainer>
   );

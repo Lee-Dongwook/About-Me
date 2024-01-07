@@ -11,7 +11,7 @@ export const WorkExperienceInfoCard = ({ workExperienceInfo }: Props) => {
     <CardContainer>
       <div>
         <h3>Work Experience</h3>
-        <p>
+        <div>
           {workExperienceInfo.map((work) => {
             return (
               <ul key={work.company}>
@@ -25,7 +25,7 @@ export const WorkExperienceInfoCard = ({ workExperienceInfo }: Props) => {
               </ul>
             );
           })}
-        </p>
+        </div>
       </div>
     </CardContainer>
   );
