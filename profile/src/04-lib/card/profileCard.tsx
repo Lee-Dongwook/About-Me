@@ -1,15 +1,16 @@
+import Image from 'next/image';
 import Link from 'next/link';
-import styled from 'styled-components';
-
+import my from '@/00-assets/image/my.png';
 import type { BasicInfo } from '@/01-domain';
 
-interface Props {
+type Props = {
   basicInfo: BasicInfo;
-}
+};
 
-export const HeaderComponent = ({ basicInfo }: Props) => {
+export const ProfileCard = ({ basicInfo }: Props) => {
   return (
-    <header>
+    <section>
+      <Image src={my} width={200} height={200} alt='사진' />
       <div>
         <h1>{basicInfo.name}</h1>
         <h2>{basicInfo.birthday}</h2>
@@ -25,6 +26,6 @@ export const HeaderComponent = ({ basicInfo }: Props) => {
           <Link href={``}>{basicInfo.blog}</Link>
         </h2>
       </div>
-    </header>
+    </section>
   );
 };

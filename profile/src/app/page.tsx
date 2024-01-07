@@ -16,7 +16,7 @@ import {
   TechSkillInfoListComponent,
   ActivityInfoComponent,
   CertificateInfoComponent,
-} from '@/04-ui';
+} from '@/05-ui';
 
 const Page = async () => {
   const basicInfo = await getBasicInfo();
