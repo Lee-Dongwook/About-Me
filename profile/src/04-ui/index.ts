@@ -1,9 +1,9 @@
-import { BasicInfoComponent } from "./basicInfoComponent";
-import { WorkExperienceInfoComponent } from "./workExperienceInfoComponent";
+import { BasicInfoComponent } from "./basic";
+import { WorkExperienceInfoComponent } from "./work";
 import { ProjectInfoComponent } from './project';
 import { TechSkillInfoListComponent } from "./tech";
-import { ActivityInfoComponent } from "./activityInfoComponent";
-import { CertificateInfoComponent } from "./certificateInfoComponent";
+import { ActivityInfoComponent } from "./activity";
+import { CertificateInfoComponent } from "./certificate";
 
 export { 
     BasicInfoComponent, 
