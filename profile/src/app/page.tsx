@@ -4,8 +4,6 @@ import {
   getWorkExperienceInfoList,
   getProjectInfoList,
   getTechSkillInfoList,
-  getActivityInfoList,
-  getCertificateInfoList,
 } from '@/02-application';
 
 import { Header } from '@/04-lib';
@@ -16,8 +14,6 @@ import {
   WorkExperienceInfoComponent,
   ProjectInfoComponent,
   TechSkillInfoListComponent,
-  ActivityInfoComponent,
-  CertificateInfoComponent,
 } from '@/05-ui';
 
 const Page = async () => {
@@ -26,9 +22,6 @@ const Page = async () => {
   const workExperienceInfo = await getWorkExperienceInfoList();
   const projectInfo = await getProjectInfoList();
   const techSkillInfo = await getTechSkillInfoList();
-  const activityInfo = await getActivityInfoList();
-  const certificateInfo = await getCertificateInfoList();
-
   return (
     <>
       <Header />
@@ -38,8 +31,6 @@ const Page = async () => {
         <WorkExperienceInfoComponent workExperienceInfo={workExperienceInfo} />
         <ProjectInfoComponent projectInfo={projectInfo} />
         <TechSkillInfoListComponent techSkillInfo={techSkillInfo} />
-        <ActivityInfoComponent activityInfo={activityInfo} />
-        <CertificateInfoComponent certificateInfo={certificateInfo} />
       </main>
     </>
   );
