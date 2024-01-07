@@ -1,9 +1,14 @@
-export const BackendTechInfoComponent = ({ BE }) => {
+import type { TechSkillInfoList } from '@/01-domain';
+import { BackendTechInfoTable } from '@/04-lib';
+
+type Props = {
+  BE: TechSkillInfoList['BE'];
+};
+
+export const BackendTechInfoComponent = ({ BE }: Props) => {
   return (
     <>
-      {BE.Language.map((item) => {
-        return <li key={item.name}>{item.name}</li>;
-      })}
+      <BackendTechInfoTable BE={BE} />
     </>
   );
 };

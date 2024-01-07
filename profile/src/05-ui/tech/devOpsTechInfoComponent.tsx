@@ -1,9 +1,14 @@
-export const DevOpsTechInfoComponent = ({ DevOps }) => {
+import type { TechSkillInfoList } from '@/01-domain';
+import { DevOpsTechInfoTable } from '@/04-lib';
+
+type Props = {
+  DevOps: TechSkillInfoList['DevOps'];
+};
+
+export const DevOpsTechInfoComponent = ({ DevOps }: Props) => {
   return (
     <>
-      {DevOps.map((item) => {
-        return <li key={item.name}>{item.name}</li>;
-      })}
+      <DevOpsTechInfoTable DevOps={DevOps} />
     </>
   );
 };

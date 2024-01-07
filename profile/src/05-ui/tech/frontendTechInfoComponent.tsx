@@ -1,21 +1,14 @@
-export const FrontendTechInfoComponent = ({ FE }) => {
+import type { TechSkillInfoList } from '@/01-domain';
+import { FrontendTechInfoTable } from '@/04-lib';
+
+type Props = {
+  FE: TechSkillInfoList['FE'];
+};
+
+export const FrontendTechInfoComponent = ({ FE }: Props) => {
   return (
     <>
-      {FE.Language.map((item) => {
-        return <li key={item.name}>{item.name}</li>;
-      })}
-      {FE.LibraryOrFramework.map((item) => {
-        return <li key={item.name}>{item.name}</li>;
-      })}
-      {FE.Style.map((item) => {
-        return <li key={item.name}>{item.name}</li>;
-      })}
-      {FE.Test.map((item) => {
-        return <li key={item.name}>{item.name}</li>;
-      })}
-      {FE.Format.map((item) => {
-        return <li key={item.name}>{item.name}</li>;
-      })}
+      <FrontendTechInfoTable FE={FE} />
     </>
   );
 };

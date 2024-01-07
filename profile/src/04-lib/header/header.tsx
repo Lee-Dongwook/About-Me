@@ -15,7 +15,7 @@ export const Header = () => {
             <Link href={'/project'}>Projects</Link>
           </NavItem>
           <NavItem>
-            <Link href={'/skill'}>Skills</Link>
+            <Link href={'/tech'}>Tech Skills</Link>
           </NavItem>
           <NavItem>
             <Link href={'/activity'}>Activity & Education</Link>

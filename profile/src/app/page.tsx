@@ -3,7 +3,6 @@ import {
   getIntroduceInfo,
   getWorkExperienceInfoList,
   getProjectInfoList,
-  getTechSkillInfoList,
 } from '@/02-application';
 
 import { Header } from '@/04-lib';
@@ -13,7 +12,6 @@ import {
   IntroduceComponent,
   WorkExperienceInfoComponent,
   ProjectInfoComponent,
-  TechSkillInfoListComponent,
 } from '@/05-ui';
 
 const Page = async () => {
@@ -21,7 +19,6 @@ const Page = async () => {
   const introduceInfo = await getIntroduceInfo();
   const workExperienceInfo = await getWorkExperienceInfoList();
   const projectInfo = await getProjectInfoList();
-  const techSkillInfo = await getTechSkillInfoList();
   return (
     <>
       <Header />
@@ -30,7 +27,6 @@ const Page = async () => {
         <IntroduceComponent introduceInfo={introduceInfo} />
         <WorkExperienceInfoComponent workExperienceInfo={workExperienceInfo} />
         <ProjectInfoComponent projectInfo={projectInfo} />
-        <TechSkillInfoListComponent techSkillInfo={techSkillInfo} />
       </main>
     </>
   );
