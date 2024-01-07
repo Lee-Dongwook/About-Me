@@ -1,9 +1,10 @@
 import type { ActivityInfoList } from '@/01-domain';
-import { getActivityInfoList } from '@/02-application';
 
-export const ActivityInfoComponent = async () => {
-  const activityInfo: ActivityInfoList = await getActivityInfoList();
+type Props = {
+  activityInfo: ActivityInfoList;
+};
 
+export const ActivityInfoComponent = ({ activityInfo }: Props) => {
   return (
     <>
       {activityInfo.map((activity) => {

@@ -1,9 +1,10 @@
 import type { CertificateInfoList } from '@/01-domain';
-import { getCertificateInfoList } from '@/02-application';
 
-export const CertificateInfoComponent = async () => {
-  const certificateInfo: CertificateInfoList = await getCertificateInfoList();
+type Props = {
+  certificateInfo: CertificateInfoList;
+};
 
+export const CertificateInfoComponent = ({ certificateInfo }: Props) => {
   return (
     <>
       {certificateInfo.map((certificate) => {

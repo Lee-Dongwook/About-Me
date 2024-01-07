@@ -1,9 +1,10 @@
 import type { WorkExperienceInfoList } from '@/01-domain';
-import { getWorkExperienceInfoList } from '@/02-application';
 
-export const WorkExperienceInfoComponent = async () => {
-  const workExperienceInfo: WorkExperienceInfoList = await getWorkExperienceInfoList();
+type Props = {
+  workExperienceInfo: WorkExperienceInfoList;
+};
 
+export const WorkExperienceInfoComponent = ({ workExperienceInfo }: Props) => {
   return (
     <>
       {workExperienceInfo.map((work) => {
