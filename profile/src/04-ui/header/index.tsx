@@ -1,5 +1,7 @@
-import type { BasicInfo } from '@/01-domain';
 import Link from 'next/link';
+import styled from 'styled-components';
+
+import type { BasicInfo } from '@/01-domain';
 
 interface Props {
   basicInfo: BasicInfo;
