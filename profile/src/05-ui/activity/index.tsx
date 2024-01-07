@@ -1,4 +1,5 @@
 import type { ActivityInfoList } from '@/01-domain';
+import { ActivityInfoCard } from '@/04-lib';
 
 type Props = {
   activityInfo: ActivityInfoList;
@@ -7,15 +8,7 @@ type Props = {
 export const ActivityInfoComponent = ({ activityInfo }: Props) => {
   return (
     <>
-      {activityInfo.map((activity) => {
-        return (
-          <>
-            <div>{activity.name}</div>
-            <div>{activity.period}</div>
-            <div>{activity.description ? activity.description : null}</div>
-          </>
-        );
-      })}
+      <ActivityInfoCard activityInfo={activityInfo} />
     </>
   );
 };
