@@ -1,5 +1,6 @@
 import {
   getBasicInfo,
+  getIntroduceInfo,
   getWorkExperienceInfoList,
   getProjectInfoList,
   getTechSkillInfoList,
@@ -9,6 +10,7 @@ import {
 
 import {
   HeaderComponent,
+  IntroduceComponent,
   WorkExperienceInfoComponent,
   ProjectInfoComponent,
   TechSkillInfoListComponent,
@@ -18,6 +20,7 @@ import {
 
 const Page = async () => {
   const basicInfo = await getBasicInfo();
+  const introduceInfo = await getIntroduceInfo();
   const workExperienceInfo = await getWorkExperienceInfoList();
   const projectInfo = await getProjectInfoList();
   const techSkillInfo = await getTechSkillInfoList();
@@ -28,7 +31,7 @@ const Page = async () => {
     <>
       <HeaderComponent basicInfo={basicInfo} />
       <main>
-        <ul>{'자기 소개 부분'}</ul>
+        <IntroduceComponent introduceInfo={introduceInfo} />
         <WorkExperienceInfoComponent workExperienceInfo={workExperienceInfo} />
         <ProjectInfoComponent projectInfo={projectInfo} />
         <TechSkillInfoListComponent techSkillInfo={techSkillInfo} />
