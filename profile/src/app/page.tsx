@@ -14,7 +14,7 @@ const Page = async () => {
         <BasicInfoComponent />
         <ul>{'자기 소개 부분'}</ul>
         <WorkExperienceInfoComponent />
-        {/* <ProjectInfoComponent /> */}
+        <ProjectInfoComponent />
         <TechSkillInfoListComponent />
         <ActivityInfoComponent />
         <CertificateInfoComponent />
