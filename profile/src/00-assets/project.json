@@ -74,7 +74,7 @@
             "BE": ["Node.JS", "Express"],
             "DB": ["MongoDB"]
         },
-        "Functions": []
+        "Functions": ["a"]
     }
   ],
   "Solo": [
@@ -85,7 +85,7 @@
         "Skills": {
             "FE":["React","NextJS","TypeScript","styled-components","pnpm"]
         },
-        "Functions": []
+        "Functions": ["b"]
     },
     {
         "name": "",
@@ -94,7 +94,7 @@
         "Skills": {
             
         },
-        "Functions": []
+        "Functions": ["c"]
     },
     {
         "name": "React_Next_Reddit",
@@ -105,7 +105,8 @@
             "BE": ["Express", "SWR", "TypeORM"],
             "DB": ["PostgreSQL"],
             "DevOps": ["Docker"]
-        }
+        },
+        "Functions": ["d"]
     }
   ]
 }
