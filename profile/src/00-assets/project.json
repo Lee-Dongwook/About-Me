@@ -79,11 +79,11 @@
   ],
   "Solo": [
     {
-        "name": "",
-        "description": "",
-        "period": "",
+        "name": "About Me",
+        "description": "자기소개 페이지",
+        "period": "2024.01",
         "Skills": {
-
+            "FE":["React","NextJS","TypeScript","styled-components","pnpm"]
         },
         "Functions": []
     },
@@ -97,13 +97,15 @@
         "Functions": []
     },
     {
-        "name": "",
-        "description": "",
-        "period": "",
+        "name": "React_Next_Reddit",
+        "description": "NextJS로 구성해보는 Reddit 커뮤니티 클론 코딩",
+        "period": "2023.12",
         "Skills": {
-            
-        },
-        "Functions": []
+            "FE": ["React", "NextJS", "TypeScript", "Redux","React Query", "TailWindCSS", "pnpm", "ESLint", "Prettier"],
+            "BE": ["Express", "SWR", "TypeORM"],
+            "DB": ["PostgreSQL"],
+            "DevOps": ["Docker"]
+        }
     }
   ]
 }
