@@ -6,32 +6,59 @@ type Props = {
   certificateInfo: CertificateInfoList;
 };
 
+type CardProps = {
+  even?: boolean;
+};
+
 export const CertificateInfoComponent = ({ certificateInfo }: Props) => {
   return (
-    <div>
-      <h3>Certificate</h3>
-      <div>
+    <CardContainer>
+      <div style={{ textAlign: 'center' }}>
+        <h3>Certificate</h3>
+        <br />
+        <TimeLineItem />
         {certificateInfo.map((item, index) => {
           return (
-            <CardContainer key={index}>
-              <div>
-                <h4>{item.title}</h4>
-                <h5>{item.id}</h5>
-                <h5>{item.date}</h5>
-              </div>
-            </CardContainer>
+            <Card key={index} even={index % 2 === 0}>
+              <p>{item.title}</p>
+              <p>{item.id}</p>
+              <p>{item.date}</p>
+            </Card>
           );
         })}
       </div>
-    </div>
+    </CardContainer>
   );
 };
 
 const CardContainer = styled.div`
   display: flex;
+  justify-content: center;
   align-items: center;
   border: 1px solid #ccc;
   padding: 16px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const Card = styled.div<CardProps>`
+  width: 400px;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: ${(props) => (props.even ? '0' : '500px')};
+`;
+
+const TimeLineItem = styled.div`
+  position: relative;
+  &:not(:last-child)::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    width: 5px;
+    height: 80vh;
+    background-color: #bbb;
+  }
 `;

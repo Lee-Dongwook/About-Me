@@ -8,23 +8,25 @@ type Props = {
 
 export const TeamProjectInfoComponent = ({ Team }: Props) => {
   return (
-    <>
-      <h1>Team Projects</h1>
-      {Team.map((project, index) => {
-        return (
-          <div key={index}>
-            <CardContainer>
-              <div>
-                <h3>Name: {project.name}</h3>
-                <h4>Description: {project.description}</h4>
-                <h4>Members: {project.member.total}</h4>
-                <h4>Functions: {project.Functions} </h4>
-              </div>
-            </CardContainer>
-          </div>
-        );
-      })}
-    </>
+    <CardContainer>
+      <div>
+        <h1>Team Projects</h1>
+        {Team.map((project, index) => {
+          return (
+            <div key={index}>
+              <CardContainer>
+                <div>
+                  <h3>Name: {project.name}</h3>
+                  <h4>Description: {project.description}</h4>
+                  <h4>Members: {project.member.total}</h4>
+                  <h4>Functions: {project.Functions} </h4>
+                </div>
+              </CardContainer>
+            </div>
+          );
+        })}
+      </div>
+    </CardContainer>
   );
 };
 

@@ -14,16 +14,14 @@ export const ActivityInfoComponent = ({ activityInfo }: Props) => {
   return (
     <CardContainer>
       <div style={{ textAlign: 'center' }}>
-        <h3>Activity</h3>
+        <h3>Activity & Education</h3>
         <br />
         <TimeLineItem />
         {activityInfo.map((item, index) => {
           return (
             <Card key={index} even={index % 2 === 0}>
-              <div key={index}>
-                <p>{item.name}</p>
-                <p>{item.period}</p>
-              </div>
+              <p>{item.name}</p>
+              <p>{item.period}</p>
             </Card>
           );
         })}
