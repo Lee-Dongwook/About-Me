@@ -11,9 +11,6 @@ export const Header = () => {
             <Link href={'/'}>Home</Link>
           </NavItem>
           <NavItem>
-            <Link href={'/about'}>About</Link>
-          </NavItem>
-          <NavItem>
             <Link href={'/project'}>Projects</Link>
           </NavItem>
           <NavItem>
