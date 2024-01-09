@@ -8,33 +8,27 @@ type Props = {
 
 export const TeamProjectInfoComponent = ({ Team }: Props) => {
   return (
-    <CardContainer>
-      <div>
-        <h1>Team Projects</h1>
-        {Team.map((project, index) => {
-          return (
-            <div key={index}>
-              <CardContainer>
-                <div>
-                  <h3>Name: {project.name}</h3>
-                  <h4>Description: {project.description}</h4>
-                  <h4>Members: {project.member.total}</h4>
-                  <h4>Functions: {project.Functions} </h4>
-                </div>
-              </CardContainer>
-            </div>
-          );
-        })}
-      </div>
-    </CardContainer>
+    <div style={{ textAlign: 'center' }}>
+      <h1>Team Projects</h1>
+      {Team.map((project, index) => {
+        return (
+          <Card key={index}>
+            <h3>{project.name}</h3>
+            <hr />
+            <h4>Description: {project.description}</h4>
+            <h4>Members: {project.member.total}</h4>
+            <h4>Functions: {project.Functions} </h4>
+          </Card>
+        );
+      })}
+    </div>
   );
 };
 
-const CardContainer = styled.div`
-  display: flex;
-  align-items: center;
+const Card = styled.div`
+  text-align: start;
   border: 1px solid #ccc;
-  padding: 16px;
-  border-radius: 8px;
+  padding: 100px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
