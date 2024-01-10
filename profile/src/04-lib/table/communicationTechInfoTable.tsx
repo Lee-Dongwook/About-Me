@@ -1,6 +1,6 @@
 'use client';
 import type { TechSkillInfoList } from '@/01-domain';
-import styled from 'styled-components';
+import { TechTableContainer, TechTableTh, TechTableTd, TechTableItem } from '@/03-styles';
 
 type Props = {
   Communication: TechSkillInfoList['Communication'];
@@ -8,38 +8,21 @@ type Props = {
 
 export const CommunicationTechInfoTable = ({ Communication }: Props) => {
   return (
-    <TechInfoTableContainer>
+    <TechTableContainer>
       <thead>
         <tr>
-          <Th>Tools</Th>
+          <TechTableTh>Tools</TechTableTh>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <Td>
+          <TechTableTd>
             {Communication.map((item, index) => (
-              <div key={index}>{item.name}</div>
+              <TechTableItem key={index}>{item.name}</TechTableItem>
             ))}
-          </Td>
+          </TechTableTd>
         </tr>
       </tbody>
-    </TechInfoTableContainer>
+    </TechTableContainer>
   );
 };
-
-const TechInfoTableContainer = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-`;
-
-const Th = styled.th`
-  background-color: #f2f2f2;
-  padding: 10px;
-  border: 1px solid #dddddd;
-`;
-
-const Td = styled.td`
-  padding: 10px;
-  border: 1px solid #dddddd;
-`;

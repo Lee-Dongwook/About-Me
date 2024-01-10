@@ -1,6 +1,7 @@
 'use client';
+
 import type { TechSkillInfoList } from '@/01-domain';
-import styled from 'styled-components';
+import { TechTableContainer, TechTableTh, TechTableTd, TechTableItem } from '@/03-styles';
 
 type Props = {
   FE: TechSkillInfoList['FE'];
@@ -8,68 +9,51 @@ type Props = {
 
 export const FrontendTechInfoTable = ({ FE }: Props) => {
   return (
-    <TechInfoTableContainer>
+    <TechTableContainer>
       <thead>
         <tr>
-          <Th>Language</Th>
-          <Th>Library/Framework</Th>
-          <Th>Style</Th>
-          <Th>Test</Th>
-          <Th>Format</Th>
+          <TechTableTh>Language</TechTableTh>
+          <TechTableTh>Library/Framework</TechTableTh>
+          <TechTableTh>Style</TechTableTh>
+          <TechTableTh>Test</TechTableTh>
+          <TechTableTh>Format</TechTableTh>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <Td>
+          <TechTableTd>
             {FE.Language.map((item, index) => (
-              <div key={index}>{item.name}</div>
+              <TechTableItem key={index}>{item.name}</TechTableItem>
             ))}
-          </Td>
-          <Td>
+          </TechTableTd>
+          <TechTableTd>
             {FE.LibraryOrFramework.map((item, index) => (
-              <div key={index}>{item.name}</div>
+              <TechTableItem key={index}>{item.name}</TechTableItem>
             ))}
-          </Td>
-          <Td>
+          </TechTableTd>
+          <TechTableTd>
             <ul>
               {FE.Style.map((item, index) => (
-                <div key={index}>{item.name}</div>
+                <TechTableItem key={index}>{item.name}</TechTableItem>
               ))}
             </ul>
-          </Td>
-          <Td>
+          </TechTableTd>
+          <TechTableTd>
             <ul>
               {FE.Test.map((item, index) => (
-                <div key={index}>{item.name}</div>
+                <TechTableItem key={index}>{item.name}</TechTableItem>
               ))}
             </ul>
-          </Td>
-          <Td>
+          </TechTableTd>
+          <TechTableTd>
             <ul>
               {FE.Format.map((item, index) => (
-                <div key={index}>{item.name}</div>
+                <TechTableItem key={index}>{item.name}</TechTableItem>
               ))}
             </ul>
-          </Td>
+          </TechTableTd>
         </tr>
       </tbody>
-    </TechInfoTableContainer>
+    </TechTableContainer>
   );
 };
-
-const TechInfoTableContainer = styled.table`
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-`;
-
-const Th = styled.th`
-  background-color: #f2f2f2;
-  padding: 10px;
-  border: 1px solid #dddddd;
-`;
-
-const Td = styled.td`
-  padding: 10px;
-  border: 1px solid #dddddd;
-`;

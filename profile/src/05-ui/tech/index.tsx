@@ -6,11 +6,15 @@ import { CommunicationTechInfoComponent } from './communicationTechInfoComponent
 
 export const TechSkillInfoListComponent = ({ techSkillInfo }: TechSkillUiProps) => {
   return (
-    <>
-      <FrontendTechInfoComponent FE={techSkillInfo.FE} />
-      <BackendTechInfoComponent BE={techSkillInfo.BE} />
-      <DevOpsTechInfoComponent DevOps={techSkillInfo.DevOps} />
-      <CommunicationTechInfoComponent Communication={techSkillInfo.Communication} />
-    </>
+    <div>
+      <div>
+        <FrontendTechInfoComponent FE={techSkillInfo.FE} />
+        <BackendTechInfoComponent BE={techSkillInfo.BE} />
+      </div>
+      <div>
+        <DevOpsTechInfoComponent DevOps={techSkillInfo.DevOps} />
+        <CommunicationTechInfoComponent Communication={techSkillInfo.Communication} />
+      </div>
+    </div>
   );
 };
