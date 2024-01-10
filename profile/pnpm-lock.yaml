@@ -26,6 +26,9 @@ dependencies:
   styled-components:
     specifier: ^6.1.6
     version: 6.1.6(react-dom@18.2.0)(react@18.2.0)
+  styled-reset:
+    specifier: ^4.5.2
+    version: 4.5.2(styled-components@6.1.6)
 
 devDependencies:
   '@swc/plugin-styled-components':
@@ -4871,6 +4874,15 @@ packages:
       '@babel/core': 7.23.7
       client-only: 0.0.1
       react: 18.2.0
+    dev: false
+
+  /styled-reset@4.5.2(styled-components@6.1.6):
+    resolution: {integrity: sha512-dbAaaVEhweBs2FGfqGBdW6oMcMK8238C2X5KCxBhUQJX92m/QyUfzRADOXhdXiXNkIPELtMCd72YY9eCdORfIw==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      styled-components: '>=4.0.0 || >=5.0.0 || >=6.0.0'
+    dependencies:
+      styled-components: 6.1.6(react-dom@18.2.0)(react@18.2.0)
     dev: false
 
   /stylelint@16.1.0(typescript@5.3.3):

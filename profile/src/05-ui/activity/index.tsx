@@ -1,63 +1,27 @@
 'use client';
-import styled from 'styled-components';
 import type { ActivityInfoList } from '@/01-domain';
+import { ActivityCardContainer, ActivityCard } from '@/03-styles';
 
-type Props = {
+type ActivityUiProps = {
   activityInfo: ActivityInfoList;
 };
 
-type CardProps = {
-  even?: boolean;
-};
-
-export const ActivityInfoComponent = ({ activityInfo }: Props) => {
+export const ActivityInfoComponent = ({ activityInfo }: ActivityUiProps) => {
   return (
-    <CardContainer>
+    <ActivityCardContainer>
       <div style={{ textAlign: 'center' }}>
         <h3>Activity & Education</h3>
         <br />
-        <TimeLineItem />
+        <br />
         {activityInfo.map((item, index) => {
           return (
-            <Card key={index} even={index % 2 === 0}>
+            <ActivityCard key={index} even={index % 2 === 0}>
               <p>{item.name}</p>
               <p>{item.period}</p>
-            </Card>
+            </ActivityCard>
           );
         })}
       </div>
-    </CardContainer>
+    </ActivityCardContainer>
   );
 };
-
-const CardContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #ccc;
-  padding: 16px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-`;
-
-const Card = styled.div<CardProps>`
-  width: 400px;
-  text-align: center;
-  border: 1px solid #ccc;
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-left: ${(props) => (props.even ? '0' : '500px')};
-`;
-
-const TimeLineItem = styled.div`
-  position: relative;
-  &:not(:last-child)::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    width: 5px;
-    height: 90vh;
-    background-color: #bbb;
-  }
-`;
