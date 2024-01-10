@@ -1,20 +1,18 @@
 'use client';
 import { useInView } from 'react-intersection-observer';
 import styled from 'styled-components';
-import type { BasicInfo, IntroduceInfo, WorkExperienceInfoList } from '@/01-domain';
 import { BasicComponent } from '@/05-ui';
-
-type Props = {
-  basicInfo: BasicInfo;
-  introduceInfo: IntroduceInfo;
-  workExperienceInfo: WorkExperienceInfoList;
-};
+import { IntroduceUiProps } from '@/05-ui/props.types';
 
 type CardContainerProps = {
   animate?: boolean;
 };
 
-export const IntroduceComponent = ({ basicInfo, introduceInfo, workExperienceInfo }: Props) => {
+export const IntroduceComponent = ({
+  basicInfo,
+  introduceInfo,
+  workExperienceInfo,
+}: IntroduceUiProps) => {
   const [firstCardRef, firstCardInView] = useInView();
   const [secondCardRef, secondCardInView] = useInView();
   const [thirdCardRef, thirdCardInView] = useInView();

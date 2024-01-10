@@ -1,10 +1,6 @@
 'use client';
-import type { ActivityInfoList } from '@/01-domain';
 import { ActivityCardContainer, ActivityCard } from '@/03-styles';
-
-type ActivityUiProps = {
-  activityInfo: ActivityInfoList;
-};
+import type { ActivityUiProps } from '@/05-ui/props.types';
 
 export const ActivityInfoComponent = ({ activityInfo }: ActivityUiProps) => {
   return (

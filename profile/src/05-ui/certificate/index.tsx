@@ -1,10 +1,6 @@
 'use client';
-import type { CertificateInfoList } from '@/01-domain';
 import { CertificateCardContainer, CertificateCard } from '@/03-styles';
-
-type CertificateUiProps = {
-  certificateInfo: CertificateInfoList;
-};
+import type { CertificateUiProps } from '@/05-ui/props.types';
 
 export const CertificateInfoComponent = ({ certificateInfo }: CertificateUiProps) => {
   return (

@@ -1,11 +1,7 @@
 'use client';
 import Link from 'next/link';
-import type { SoloProjectInfo } from '@/01-domain/projectInfo.types';
 import { ProjectCard, ProjectButton } from '@/03-styles';
-
-type SoloProjectUiProps = {
-  Solo: SoloProjectInfo[];
-};
+import type { SoloProjectUiProps } from '@/05-ui/props.types';
 
 export const SoloProjectInfoComponent = ({ Solo }: SoloProjectUiProps) => {
   return (

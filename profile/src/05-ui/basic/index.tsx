@@ -4,13 +4,9 @@ import Link from 'next/link';
 import styled from 'styled-components';
 
 import my from '@/00-assets/image/my.png';
-import type { BasicInfo } from '@/01-domain';
+import type { BasicUiProps } from '@/05-ui/props.types';
 
-interface Props {
-  basicInfo: BasicInfo;
-}
-
-export const BasicComponent = ({ basicInfo }: Props) => {
+export const BasicComponent = ({ basicInfo }: BasicUiProps) => {
   return (
     <CardContainer>
       <ProfileImage src={my} width={250} height={250} alt='사진' />

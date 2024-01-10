@@ -1,14 +1,10 @@
-import type { TechSkillInfoList } from '@/01-domain';
+import type { TechSkillUiProps } from '@/05-ui/props.types';
 import { FrontendTechInfoComponent } from './frontendTechInfoComponent';
 import { BackendTechInfoComponent } from './backendTechInfoComponent';
 import { DevOpsTechInfoComponent } from './devOpsTechInfoComponent';
 import { CommunicationTechInfoComponent } from './communicationTechInfoComponent';
 
-type Props = {
-  techSkillInfo: TechSkillInfoList;
-};
-
-export const TechSkillInfoListComponent = ({ techSkillInfo }: Props) => {
+export const TechSkillInfoListComponent = ({ techSkillInfo }: TechSkillUiProps) => {
   return (
     <>
       <FrontendTechInfoComponent FE={techSkillInfo.FE} />

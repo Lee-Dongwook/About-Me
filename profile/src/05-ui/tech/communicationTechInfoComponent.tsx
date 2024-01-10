@@ -1,11 +1,7 @@
-import type { TechSkillInfoList } from '@/01-domain';
 import { CommunicationTechInfoTable } from '@/04-lib';
+import type { CommunicationTechUiProps } from '@/05-ui/props.types';
 
-type Props = {
-  Communication: TechSkillInfoList['Communication'];
-};
-
-export const CommunicationTechInfoComponent = ({ Communication }: Props) => {
+export const CommunicationTechInfoComponent = ({ Communication }: CommunicationTechUiProps) => {
   return (
     <>
       <CommunicationTechInfoTable Communication={Communication} />

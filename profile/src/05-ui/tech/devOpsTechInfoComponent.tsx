@@ -1,11 +1,7 @@
-import type { TechSkillInfoList } from '@/01-domain';
 import { DevOpsTechInfoTable } from '@/04-lib';
+import type { DevOpsTechUiProps } from '@/05-ui/props.types';
 
-type Props = {
-  DevOps: TechSkillInfoList['DevOps'];
-};
-
-export const DevOpsTechInfoComponent = ({ DevOps }: Props) => {
+export const DevOpsTechInfoComponent = ({ DevOps }: DevOpsTechUiProps) => {
   return (
     <>
       <DevOpsTechInfoTable DevOps={DevOps} />

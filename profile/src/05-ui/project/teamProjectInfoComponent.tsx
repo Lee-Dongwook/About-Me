@@ -1,11 +1,7 @@
 'use client';
 import Link from 'next/link';
-import type { TeamProjectInfo } from '@/01-domain/projectInfo.types';
 import { ProjectCard, ProjectButton } from '@/03-styles';
-
-type TeamProjectUiProps = {
-  Team: TeamProjectInfo[];
-};
+import type { TeamProjectUiProps } from '@/05-ui/props.types';
 
 export const TeamProjectInfoComponent = ({ Team }: TeamProjectUiProps) => {
   return (

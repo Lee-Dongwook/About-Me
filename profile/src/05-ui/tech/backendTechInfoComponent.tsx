@@ -1,11 +1,7 @@
-import type { TechSkillInfoList } from '@/01-domain';
 import { BackendTechInfoTable } from '@/04-lib';
+import type { BackendTechUiProps } from '@/05-ui/props.types';
 
-type Props = {
-  BE: TechSkillInfoList['BE'];
-};
-
-export const BackendTechInfoComponent = ({ BE }: Props) => {
+export const BackendTechInfoComponent = ({ BE }: BackendTechUiProps) => {
   return (
     <>
       <BackendTechInfoTable BE={BE} />

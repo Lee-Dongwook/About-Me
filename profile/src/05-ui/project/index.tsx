@@ -1,12 +1,8 @@
 'use client';
-import type { ProjectInfoList } from '@/01-domain';
 import { ProjectCardContainer } from '@/03-styles';
 import { TeamProjectInfoComponent } from './teamProjectInfoComponent';
 import { SoloProjectInfoComponent } from './soloProjectInfoComponent';
-
-type ProjectUiProps = {
-  projectInfo: ProjectInfoList;
-};
+import type { ProjectUiProps } from '@/05-ui/props.types';
 
 export const ProjectInfoComponent = async ({ projectInfo }: ProjectUiProps) => {
   return (
