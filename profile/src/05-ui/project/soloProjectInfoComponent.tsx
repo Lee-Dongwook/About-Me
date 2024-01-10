@@ -1,4 +1,4 @@
-'use client';
+import Link from 'next/link';
 import styled from 'styled-components';
 import type { SoloProjectInfo } from '@/01-domain/projectInfo.types';
 
@@ -15,8 +15,10 @@ export const SoloProjectInfoComponent = ({ Solo }: Props) => {
           <Card key={index}>
             <h3>{project.name}</h3>
             <hr />
-            <h4>Description: {project.description}</h4>
-            <h4>Functions: {project.Functions} </h4>
+            <h4>{project.description}</h4>
+            <Link href={`/project/solo/${index}`}>
+              <Button>More Details {'>'}</Button>
+            </Link>
           </Card>
         );
       })}
@@ -30,4 +32,16 @@ const Card = styled.div`
   padding: 100px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+`;
+
+const Button = styled.div`
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  text-align: right;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 `;

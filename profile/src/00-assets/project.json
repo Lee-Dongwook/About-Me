@@ -88,15 +88,6 @@
         "Functions": ["b"]
     },
     {
-        "name": "",
-        "description": "",
-        "period": "",
-        "Skills": {
-            
-        },
-        "Functions": ["c"]
-    },
-    {
         "name": "React_Next_Reddit",
         "description": "NextJS로 구성해보는 Reddit 커뮤니티 클론 코딩",
         "period": "2023.12",
