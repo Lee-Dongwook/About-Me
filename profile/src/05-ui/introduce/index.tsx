@@ -22,13 +22,23 @@ export const IntroduceComponent = ({ basicInfo, introduceInfo }: Props) => {
   return (
     <div>
       <CardContainer ref={firstCardRef} animate={firstCardInView}>
-        <div>
-          <h3>Hello!</h3>
-          {introduceInfo.introduce.map((item, index) => {
-            return <p key={index}>{item}</p>;
-          })}
-        </div>
-        <BasicComponent basicInfo={basicInfo} />
+        <table>
+          <tbody>
+            <tr>
+              <td>
+                {' '}
+                <h3>Hello!</h3>
+                {introduceInfo.introduce.map((item, index) => {
+                  return <p key={index}>{item}</p>;
+                })}
+              </td>
+              <td style={{ padding: '100px' }}>
+                {' '}
+                <BasicComponent basicInfo={basicInfo} />
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </CardContainer>
       <CardContainer ref={secondCardRef} animate={secondCardInView}>
         <div>
