@@ -1,6 +1,6 @@
 import { getBasicInfo, getIntroduceInfo, getWorkExperienceInfoList } from '@/02-application';
 import { Header } from '@/04-lib';
-import { IntroduceComponent, WorkExperienceInfoComponent } from '@/05-ui';
+import { IntroduceComponent } from '@/05-ui';
 
 const Page = async () => {
   const basicInfo = await getBasicInfo();
@@ -9,8 +9,11 @@ const Page = async () => {
   return (
     <>
       <Header />
-      <IntroduceComponent basicInfo={basicInfo} introduceInfo={introduceInfo} />
-      <WorkExperienceInfoComponent workExperienceInfo={workExperienceInfo} />
+      <IntroduceComponent
+        basicInfo={basicInfo}
+        introduceInfo={introduceInfo}
+        workExperienceInfo={workExperienceInfo}
+      />
     </>
   );
 };

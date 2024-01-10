@@ -13,23 +13,23 @@ interface Props {
 export const BasicComponent = ({ basicInfo }: Props) => {
   return (
     <CardContainer>
-      <ProfileImage src={my} width={200} height={200} alt='사진' />
+      <ProfileImage src={my} width={250} height={250} alt='사진' />
       <InfoContainer>
         <Name>{basicInfo.name}</Name>
         <hr />
         <Details>
-          <span>생년월일 : {basicInfo.birthday}</span>
+          <span>Birth : {basicInfo.birthday}</span>
           <span>({basicInfo.age}세)</span>
         </Details>
         <Details>
-          이메일 : <StyledLink href={`mailto:dlehddnr0713@gmail.com`}>{basicInfo.email}</StyledLink>
+          Email : <StyledLink href={`mailto:dlehddnr0713@gmail.com`}>{basicInfo.email}</StyledLink>
         </Details>
         <Details>
-          깃허브 :{' '}
+          Github :{' '}
           <StyledLink href={`https://github.com/Lee-Dongwook`}>{basicInfo.github}</StyledLink>
         </Details>
         <Details>
-          블로그 : <StyledLink href={`https://velog.io/@dlehddnr99`}>{basicInfo.blog}</StyledLink>
+          Blog : <StyledLink href={`https://velog.io/@dlehddnr99`}>{basicInfo.blog}</StyledLink>
         </Details>
       </InfoContainer>
     </CardContainer>
@@ -37,6 +37,9 @@ export const BasicComponent = ({ basicInfo }: Props) => {
 };
 
 const CardContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 400px;
   border: 1px solid #ccc;
   padding: 100px;
@@ -49,7 +52,9 @@ const InfoContainer = styled.div`
 `;
 
 const ProfileImage = styled(Image)`
-  border-radius: 50%;
+  border-radius: 10%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 const Name = styled.h3`
