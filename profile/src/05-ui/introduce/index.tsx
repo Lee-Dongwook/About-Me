@@ -1,12 +1,8 @@
 'use client';
 import { useInView } from 'react-intersection-observer';
-import styled from 'styled-components';
+import { IntroduceCardContainer } from '@/03-styles';
 import { BasicComponent } from '@/05-ui';
 import { IntroduceUiProps } from '@/05-ui/props.types';
-
-type CardContainerProps = {
-  animate?: boolean;
-};
 
 export const IntroduceComponent = ({
   basicInfo,
@@ -19,7 +15,7 @@ export const IntroduceComponent = ({
 
   return (
     <div>
-      <FirstCardContainer ref={firstCardRef} animate={firstCardInView}>
+      <IntroduceCardContainer ref={firstCardRef} animate={firstCardInView}>
         <table>
           <tbody>
             <tr>
@@ -42,8 +38,8 @@ export const IntroduceComponent = ({
             </tr>
           </tbody>
         </table>
-      </FirstCardContainer>
-      <SecondCardContainer ref={secondCardRef} animate={secondCardInView}>
+      </IntroduceCardContainer>
+      <IntroduceCardContainer ref={secondCardRef} animate={secondCardInView}>
         <div>
           <h3>Work Experience</h3>
           {workExperienceInfo.map((work, index) => {
@@ -74,51 +70,15 @@ export const IntroduceComponent = ({
             );
           })}
         </div>
-      </SecondCardContainer>
-      <ThirdCardContainer ref={thirdCardRef} animate={thirdCardInView}>
+      </IntroduceCardContainer>
+      <IntroduceCardContainer ref={thirdCardRef} animate={thirdCardInView}>
         <div>
           <h3>Currently I Learn...</h3>
           {introduceInfo.experience.practice.map((item, index) => {
             return <p key={index}>{item}</p>;
           })}
         </div>
-      </ThirdCardContainer>
+      </IntroduceCardContainer>
     </div>
   );
 };
-
-const FirstCardContainer = styled.div<CardContainerProps>`
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 100px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: ${(props) => (props.animate ? 1 : 0)};
-  transform: translateY(${(props) => (props.animate ? 0 : '100px')});
-  transition:
-    opacity 4s ease,
-    transform 4s ease;
-`;
-
-const SecondCardContainer = styled.div<CardContainerProps>`
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 100px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: ${(props) => (props.animate ? 1 : 0)};
-  transform: translateY(${(props) => (props.animate ? 0 : '100px')});
-  transition:
-    opacity 4s ease,
-    transform 4s ease;
-`;
-
-const ThirdCardContainer = styled.div<CardContainerProps>`
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 100px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: ${(props) => (props.animate ? 1 : 0)};
-  transform: translateY(${(props) => (props.animate ? 0 : '100px')});
-  transition:
-    opacity 4s ease,
-    transform 4s ease;
-`;
