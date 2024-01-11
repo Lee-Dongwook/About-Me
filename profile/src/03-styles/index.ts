@@ -3,7 +3,7 @@ import { BasicCardContainer, BasicProfileImage, BasicName, BasicDetails, BasicLi
 import { CertificateCardContainer, CertificateCard } from "./certificate";
 import { IntroduceCardContainer } from "./introduce";
 import { ProjectCardContainer, ProjectCard, ProjectButton } from "./project";
-import { TechTableContainer, TechTableTh, TechTableTd, TechTableItem } from "./tech";
+import { TechCardContainer, TechCard, TechTableContainer, TechTableTh, TechTableTd, TechTableItem } from "./tech";
 
 export { 
     ActivityCardContainer, 
@@ -19,6 +19,8 @@ export {
     ProjectCardContainer,
     ProjectCard,
     ProjectButton,
+    TechCardContainer,
+    TechCard,
     TechTableContainer,
     TechTableTh,
     TechTableTd,

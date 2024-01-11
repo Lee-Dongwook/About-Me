@@ -9,8 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 173, 216, 230;
+  --background-end-rgb: 240, 248, 255;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,

@@ -29,7 +29,11 @@ export const Header = () => {
 };
 
 const HeaderContainer = styled.header`
-  background-color: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
   color: black;
   padding: 16px;
 `;
@@ -38,11 +42,7 @@ const Navigation = styled.nav`
   display: flex;
   justify-content: center;
   align-items: center;
-`;
-
-const Logo = styled.h1`
-  margin: 0;
-  font-size: 1.5rem;
+  height: 100%;
 `;
 
 const Navbar = styled.ul`
@@ -59,6 +59,7 @@ const NavItem = styled.li`
     font-weight: bold;
 
     &:hover {
+      color: skyblue;
       text-decoration: underline;
     }
   }

@@ -27,7 +27,12 @@ export const IntroduceComponent = ({
                   return (
                     <p
                       key={index}
-                      style={{ width: '950px', fontSize: '18px', color: '#333', margin: '10px 0' }}
+                      style={{
+                        width: '1000px',
+                        fontSize: '19px',
+                        color: '#333',
+                        margin: '30px 0',
+                      }}
                     >
                       {item}
                     </p>
@@ -39,7 +44,7 @@ export const IntroduceComponent = ({
                   return (
                     <p
                       key={index}
-                      style={{ width: '950px', fontSize: '18px', color: '#333', margin: '10px 0' }}
+                      style={{ width: '950px', fontSize: '19px', color: '#333', margin: '30px 0' }}
                     >
                       {item}
                     </p>
@@ -64,13 +69,13 @@ export const IntroduceComponent = ({
                 <p style={{ fontSize: '20px', color: '#333', margin: '20px 0' }}>
                   Company: {work.company}
                 </p>
-                <p style={{ fontSize: '20px', color: '#333', margin: '20px 0' }}>
+                <p style={{ fontSize: '20px', color: '#333', margin: '30px 0' }}>
                   Position: {work.position}
                 </p>
-                <p style={{ fontSize: '20px', color: '#333', margin: '20px 0' }}>
+                <p style={{ fontSize: '20px', color: '#333', margin: '30px 0' }}>
                   Period: {work.period} ({work.month}개월)
                 </p>
-                <p style={{ fontSize: '20px', color: '#333', margin: '20px 0' }}>
+                <p style={{ fontSize: '20px', color: '#333', margin: '30px 0' }}>
                   Tech Skill : {work.tech.join(' / ')}
                 </p>
                 <hr />
@@ -78,7 +83,7 @@ export const IntroduceComponent = ({
                   {work.detail.map((task, idx) => {
                     return (
                       <div key={idx}>
-                        <p style={{ fontSize: '20px', color: '#333', margin: '10px 0' }}>
+                        <p style={{ fontSize: '20px', color: '#333', margin: '50px 0' }}>
                           {task.period}
                         </p>
                         <p style={{ fontSize: '20px', color: '#333', margin: '10px 0' }}>
@@ -87,10 +92,9 @@ export const IntroduceComponent = ({
                         <p style={{ fontSize: '20px', color: '#333', margin: '10px 0' }}>
                           {task.work}
                         </p>
-                        <p style={{ fontSize: '20px', color: '#333', margin: '10px 0' }}>
+                        <p style={{ fontSize: '20px', color: '#333', margin: '30px 0' }}>
                           {task.result.join(' / ')}
                         </p>
-                        <hr />
                       </div>
                     );
                   })}

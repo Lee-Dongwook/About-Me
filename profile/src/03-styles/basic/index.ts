@@ -6,6 +6,7 @@ export const BasicCardContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #FFFFFF;
   border: 1px solid #ccc;
   padding: 100px;
   border-radius: 8px;
