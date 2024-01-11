@@ -21,14 +21,29 @@ export const IntroduceComponent = ({
             <tr>
               <td style={{ width: '50%' }}>
                 {' '}
-                <h3>Hello!</h3>
-                {introduceInfo.introduce.map((item, index) => {
-                  return <p key={index}>{item}</p>;
-                })}
+                <h2>Hello!</h2>
                 <br />
-                <h3>Core Competence</h3>
+                {introduceInfo.introduce.map((item, index) => {
+                  return (
+                    <p
+                      key={index}
+                      style={{ width: '950px', fontSize: '18px', color: '#333', margin: '10px 0' }}
+                    >
+                      {item}
+                    </p>
+                  );
+                })}
+                <h2 style={{ marginTop: '100px' }}>Core Competence</h2>
+                <br />
                 {introduceInfo.keypoint.map((item, index) => {
-                  return <p key={index}>{item}</p>;
+                  return (
+                    <p
+                      key={index}
+                      style={{ width: '950px', fontSize: '18px', color: '#333', margin: '10px 0' }}
+                    >
+                      {item}
+                    </p>
+                  );
                 })}
               </td>
               <td style={{ width: '50%', padding: '100px' }}>
@@ -42,25 +57,39 @@ export const IntroduceComponent = ({
       <IntroduceCardContainer ref={secondCardRef} animate={secondCardInView}>
         <div>
           <h3>Work Experience</h3>
+          <br />
           {workExperienceInfo.map((work, index) => {
             return (
               <div key={index}>
-                <p>Company: {work.company}</p>
-                <p>Position: {work.position}</p>
-                <p>
+                <p style={{ fontSize: '20px', color: '#333', margin: '20px 0' }}>
+                  Company: {work.company}
+                </p>
+                <p style={{ fontSize: '20px', color: '#333', margin: '20px 0' }}>
+                  Position: {work.position}
+                </p>
+                <p style={{ fontSize: '20px', color: '#333', margin: '20px 0' }}>
                   Period: {work.period} ({work.month}개월)
                 </p>
-                <p>Tech Skill : {work.tech.join(' / ')}</p>
+                <p style={{ fontSize: '20px', color: '#333', margin: '20px 0' }}>
+                  Tech Skill : {work.tech.join(' / ')}
+                </p>
                 <hr />
                 <div>
-                  Detail Tasks
                   {work.detail.map((task, idx) => {
                     return (
                       <div key={idx}>
-                        <p>{task.period}</p>
-                        <p>{task.description}</p>
-                        <p>{task.work}</p>
-                        <p>{task.result.join(' / ')}</p>
+                        <p style={{ fontSize: '20px', color: '#333', margin: '10px 0' }}>
+                          {task.period}
+                        </p>
+                        <p style={{ fontSize: '20px', color: '#333', margin: '10px 0' }}>
+                          {task.description}
+                        </p>
+                        <p style={{ fontSize: '20px', color: '#333', margin: '10px 0' }}>
+                          {task.work}
+                        </p>
+                        <p style={{ fontSize: '20px', color: '#333', margin: '10px 0' }}>
+                          {task.result.join(' / ')}
+                        </p>
                         <hr />
                       </div>
                     );
@@ -75,7 +104,11 @@ export const IntroduceComponent = ({
         <div>
           <h3>Currently I Learn...</h3>
           {introduceInfo.experience.practice.map((item, index) => {
-            return <p key={index}>{item}</p>;
+            return (
+              <p key={index} style={{ fontSize: '20px', color: '#333', margin: '10px 0' }}>
+                {item}
+              </p>
+            );
           })}
         </div>
       </IntroduceCardContainer>
