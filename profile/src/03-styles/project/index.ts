@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ProjectCardContainer = styled.div`
- width: 50%;
+ width: 100%;
  border: 1px solid #ccc;
  padding: 16px;
  border-radius: 8px;

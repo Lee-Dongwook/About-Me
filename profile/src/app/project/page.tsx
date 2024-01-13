@@ -7,9 +7,7 @@ const Page = async () => {
   return (
     <>
       <Header />
-      <main>
-        <ProjectInfoComponent projectInfo={projectInfo} />
-      </main>
+      <ProjectInfoComponent projectInfo={projectInfo} />
     </>
   );
 };
