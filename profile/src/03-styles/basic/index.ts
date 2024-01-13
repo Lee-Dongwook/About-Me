@@ -2,17 +2,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styled from 'styled-components';
 
-export const BasicCardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #FFFFFF;
-  border: 1px solid #ccc;
-  padding: 100px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-`;
-
 export const BasicProfileImage = styled(Image)`
   border-radius: 10%;
   margin-bottom: 20px;

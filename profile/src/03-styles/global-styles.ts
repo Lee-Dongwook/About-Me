@@ -10,7 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 173, 216, 230;
-  --background-end-rgb: 240, 248, 255;
+  --background-end-rgb: 255, 255, 255;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
@@ -89,7 +89,6 @@ body {
   max-height: 100vh;
   overflow-y: auto;
 }
-
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(

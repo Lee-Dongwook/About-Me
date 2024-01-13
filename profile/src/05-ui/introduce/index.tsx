@@ -12,54 +12,44 @@ export const IntroduceComponent = ({
   const [firstCardRef, firstCardInView] = useInView();
   const [secondCardRef, secondCardInView] = useInView();
   const [thirdCardRef, thirdCardInView] = useInView();
-
+  const [fourthCardRef, fourthCardInView] = useInView();
   return (
-    <div>
+    <>
       <IntroduceCardContainer ref={firstCardRef} animate={firstCardInView}>
-        <table>
-          <tbody>
-            <tr>
-              <td style={{ width: '50%' }}>
-                {' '}
-                <h2>Hello!</h2>
-                <br />
-                {introduceInfo.introduce.map((item, index) => {
-                  return (
-                    <p
-                      key={index}
-                      style={{
-                        width: '1000px',
-                        fontSize: '19px',
-                        color: '#333',
-                        margin: '30px 0',
-                      }}
-                    >
-                      {item}
-                    </p>
-                  );
-                })}
-                <h2 style={{ marginTop: '100px' }}>Core Competence</h2>
-                <br />
-                {introduceInfo.keypoint.map((item, index) => {
-                  return (
-                    <p
-                      key={index}
-                      style={{ width: '950px', fontSize: '19px', color: '#333', margin: '30px 0' }}
-                    >
-                      {item}
-                    </p>
-                  );
-                })}
-              </td>
-              <td style={{ width: '50%', padding: '100px' }}>
-                {' '}
-                <BasicComponent basicInfo={basicInfo} />
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <BasicComponent basicInfo={basicInfo} />
       </IntroduceCardContainer>
       <IntroduceCardContainer ref={secondCardRef} animate={secondCardInView}>
+        <h2>Hello!</h2>
+        <br />
+        {introduceInfo.introduce.map((item, index) => {
+          return (
+            <p
+              key={index}
+              style={{
+                width: '1000px',
+                fontSize: '19px',
+                color: '#333',
+                margin: '30px 0',
+              }}
+            >
+              {item}
+            </p>
+          );
+        })}
+        <h2 style={{ marginTop: '100px' }}>Core Competence</h2>
+        <br />
+        {introduceInfo.keypoint.map((item, index) => {
+          return (
+            <p
+              key={index}
+              style={{ width: '950px', fontSize: '19px', color: '#333', margin: '30px 0' }}
+            >
+              {item}
+            </p>
+          );
+        })}
+      </IntroduceCardContainer>
+      <IntroduceCardContainer ref={thirdCardRef} animate={thirdCardInView}>
         <div>
           <h3>Work Experience</h3>
           <br />
@@ -104,7 +94,7 @@ export const IntroduceComponent = ({
           })}
         </div>
       </IntroduceCardContainer>
-      <IntroduceCardContainer ref={thirdCardRef} animate={thirdCardInView}>
+      <IntroduceCardContainer ref={fourthCardRef} animate={fourthCardInView}>
         <div>
           <h3>Currently I Learn...</h3>
           {introduceInfo.experience.practice.map((item, index) => {
@@ -116,6 +106,8 @@ export const IntroduceComponent = ({
           })}
         </div>
       </IntroduceCardContainer>
-    </div>
+      <br />
+      <br />
+    </>
   );
 };

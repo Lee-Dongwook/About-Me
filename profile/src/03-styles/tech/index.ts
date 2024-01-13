@@ -5,18 +5,12 @@ type CardProps = {
 }
 
 export const TechCardContainer = styled.div`
- border: 1px solid #ccc;
  padding: 16px;
- border-radius: 8px;
- box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 `;
 
 export const TechCard = styled.div<CardProps>`
   text-align: start;
-  border: 1px solid #ccc;
-  padding: 200px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 300px;
   opacity: ${(props) => (props.animate ? 1 : 0)};
   transform: translateY(${(props) => (props.animate ? 0 : '100px')});
   transition:
