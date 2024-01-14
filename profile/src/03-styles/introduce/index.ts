@@ -5,10 +5,10 @@ type CardContainerProps = {
 };
 
 export const IntroduceCardContainer = styled.div<CardContainerProps>`
-  padding: 250px;
+  padding: 220px;
   opacity: ${(props) => (props.animate ? 1 : 0)};
   transform: translateY(${(props) => (props.animate ? 0 : '150px')});
   transition:
-    opacity 5s ease,
+    opacity 5s ease-in-out,
     transform 5s ease;
 `;

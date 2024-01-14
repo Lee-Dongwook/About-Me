@@ -17,8 +17,6 @@ export const IntroduceComponent = ({
     <>
       <IntroduceCardContainer ref={firstCardRef} animate={firstCardInView}>
         <BasicComponent basicInfo={basicInfo} />
-      </IntroduceCardContainer>
-      <IntroduceCardContainer ref={secondCardRef} animate={secondCardInView}>
         <h2>Hello!</h2>
         <br />
         {introduceInfo.introduce.map((item, index) => {
@@ -36,7 +34,9 @@ export const IntroduceComponent = ({
             </p>
           );
         })}
-        <h2 style={{ marginTop: '100px' }}>Core Competence</h2>
+      </IntroduceCardContainer>
+      <IntroduceCardContainer ref={secondCardRef} animate={secondCardInView}>
+        <h2>Core Competence</h2>
         <br />
         {introduceInfo.keypoint.map((item, index) => {
           return (
