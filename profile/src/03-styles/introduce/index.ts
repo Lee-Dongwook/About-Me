@@ -5,10 +5,16 @@ type CardContainerProps = {
 };
 
 export const IntroduceCardContainer = styled.div<CardContainerProps>`
-  padding: 220px;
+  padding: 200px;
   opacity: ${(props) => (props.animate ? 1 : 0)};
   transform: translateY(${(props) => (props.animate ? 0 : '150px')});
   transition:
-    opacity 5s ease-in-out,
-    transform 5s ease;
+    opacity 4s ease-in-out,
+    transform 4s ease;
+`;
+
+export const IntroduceCardFontStyle = styled.p`
+ font-size: 20px;
+ color: #333;
+ margin: 30px 0
 `;
