@@ -7,9 +7,7 @@ const Page = async () => {
   return (
     <>
       <Header />
-      <main>
-        <TechSkillInfoListComponent techSkillInfo={techSkillInfo} />
-      </main>
+      <TechSkillInfoListComponent techSkillInfo={techSkillInfo} />
     </>
   );
 };

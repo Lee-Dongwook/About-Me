@@ -7,9 +7,7 @@ const Page = async () => {
   return (
     <>
       <Header />
-      <main>
-        <CertificateInfoComponent certificateInfo={certificateInfo} />
-      </main>
+      <CertificateInfoComponent certificateInfo={certificateInfo} />
     </>
   );
 };

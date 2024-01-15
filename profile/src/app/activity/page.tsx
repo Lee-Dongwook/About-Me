@@ -7,9 +7,7 @@ const Page = async () => {
   return (
     <>
       <Header />
-      <main>
-        <ActivityInfoComponent activityInfo={activityInfo} />
-      </main>
+      <ActivityInfoComponent activityInfo={activityInfo} />
     </>
   );
 };
