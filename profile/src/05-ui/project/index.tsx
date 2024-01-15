@@ -9,6 +9,7 @@ export const ProjectInfoComponent = async ({ projectInfo }: ProjectUiProps) => {
     <>
       <ProjectCardContainer>
         <TeamProjectInfoComponent Team={projectInfo.Team} />
+        <br />
         <SoloProjectInfoComponent Solo={projectInfo.Solo} />
       </ProjectCardContainer>
     </>

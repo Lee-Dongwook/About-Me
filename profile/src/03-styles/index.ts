@@ -2,7 +2,7 @@ import { ActivityCardContainer, ActivityCard } from "./activity";
 import { BasicProfileImage, BasicName, BasicDetails, BasicLink } from "./basic";
 import { CertificateCardContainer, CertificateCard } from "./certificate";
 import { IntroduceCardContainer, IntroduceCardFontStyle } from "./introduce";
-import { ProjectCardContainer, ProjectCard, ProjectButton } from "./project";
+import { ProjectCardContainer, ProjectCard, ProjectCardFontStyle } from "./project";
 import { TechCardContainer, TechCard, TechTableContainer, TechTableTh, TechTableTd, TechTableItem } from "./tech";
 
 export { 
@@ -18,7 +18,7 @@ export {
     IntroduceCardFontStyle,
     ProjectCardContainer,
     ProjectCard,
-    ProjectButton,
+    ProjectCardFontStyle,
     TechCardContainer,
     TechCard,
     TechTableContainer,

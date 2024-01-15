@@ -1,6 +1,5 @@
 'use client';
-import Link from 'next/link';
-import { ProjectCard, ProjectButton } from '@/03-styles';
+import { ProjectCard, ProjectCardFontStyle } from '@/03-styles';
 import type { TeamProjectUiProps } from '@/05-ui/props.types';
 
 export const TeamProjectInfoComponent = ({ Team }: TeamProjectUiProps) => {
@@ -10,12 +9,9 @@ export const TeamProjectInfoComponent = ({ Team }: TeamProjectUiProps) => {
       {Team.map((project, index) => {
         return (
           <ProjectCard key={index}>
-            <h3>{project.name}</h3>
+            <ProjectCardFontStyle>{project.name}</ProjectCardFontStyle>
             <hr />
-            <h4>{project.description}</h4>
-            <Link href={`/project/team/${index}`}>
-              <ProjectButton>More Details {'>'}</ProjectButton>
-            </Link>
+            <ProjectCardFontStyle>{project.description}</ProjectCardFontStyle>
           </ProjectCard>
         );
       })}
