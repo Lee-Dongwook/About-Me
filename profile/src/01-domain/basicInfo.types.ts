@@ -4,6 +4,7 @@ export interface BasicInfo {
     age: number
     email: string
     phone: string
+    linkedIn: string
     github: string
     blog: string
 }
