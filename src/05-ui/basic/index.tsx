@@ -1,23 +1,71 @@
 'use client';
-
-import my from '@/00-assets/image/PortFolio.webp';
-import Github from '@/00-assets/svg/github.svg';
-import { BasicProfileImage, BasicName, BasicLink } from '@/03-styles';
+import Image from 'next/image';
+import styled from 'styled-components';
+import myImage from '@/00-assets/image/PortFolio.webp';
+import GithubIcon from '@/00-assets/svg/github.svg';
+import LinkedInIcon from '@/00-assets/svg/linkedin.svg';
 import type { BasicUiProps } from '@/05-ui/props.types';
 
+const Card = styled.div`
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+`;
+
+const Content = styled.div`
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+`;
+
+const Name = styled.h2`
+  margin: 5px 0;
+  font-size: 30px;
+  color: #333;
+`;
+
+const Info = styled.p`
+  margin: 5px 0;
+  font-size: 20px;
+  color: #666;
+`;
+
+const Link = styled.a`
+  color: #0077b5;
+  text-decoration: none;
+  gap: 5px;
+`;
+
 export const BasicComponent = ({ basicInfo }: BasicUiProps) => {
+  const { name, birthday, age, email, github, linkedIn, velog } = basicInfo;
   return (
-    <>
-      <BasicProfileImage src={my} width={300} height={410} alt="사진" />
-      <BasicName>{basicInfo.name}</BasicName>
-      Birth {basicInfo.birthday} ({basicInfo.age}세) Email
-      <BasicLink href={`mailto:${basicInfo.email}`}>
-        {basicInfo.email}
-      </BasicLink>
-      <Github width={30} /> Github
-      <BasicLink href={basicInfo.github}>Link</BasicLink>
-      LinkedIn<BasicLink href={basicInfo.linkedIn}>Link</BasicLink>
-      Velog<BasicLink href={basicInfo.velog}>Link</BasicLink>
-    </>
+    <Card>
+      <Image src={myImage} alt="Profile Picture" width={300} height={400} />
+      <Content>
+        <Name>{name}</Name>
+        <hr />
+        <Info>
+          {birthday} ({age}세)
+        </Info>
+        <Info>
+          <Link href={`mailto:${email}`}>{email}</Link>
+        </Info>
+        <Info>
+          <GithubIcon />
+          <Link href={github}>Github</Link>
+        </Info>
+        <Info>
+          <LinkedInIcon width={30} />
+          <Link href={linkedIn}>LinkedIn</Link>
+        </Info>
+        <Info>
+          <Link href={velog}>Velog</Link>
+        </Info>
+      </Content>
+    </Card>
   );
 };
