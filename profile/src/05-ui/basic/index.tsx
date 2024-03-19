@@ -1,6 +1,6 @@
 'use client';
 
-import my from '@/00-assets/image/my.png';
+import my from '@/00-assets/image/PortFolio.webp';
 import { BasicProfileImage, BasicName, BasicLink } from '@/03-styles';
 import type { BasicUiProps } from '@/05-ui/props.types';
 
@@ -11,7 +11,7 @@ export const BasicComponent = ({ basicInfo }: BasicUiProps) => {
         <tbody>
           <tr>
             <td>
-              <BasicProfileImage src={my} width={250} height={300} alt='사진' />
+              <BasicProfileImage src={my} width={300} height={410} alt='사진' />
             </td>
             <td style={{ padding: '100px' }}>
               <BasicName>{basicInfo.name}</BasicName>
@@ -43,9 +43,9 @@ export const BasicComponent = ({ basicInfo }: BasicUiProps) => {
                     </td>
                   </tr>
                   <tr>
-                    <td style={{ padding: '10px' }}>Blog</td>
+                    <td style={{ padding: '10px' }}>Velog</td>
                     <td style={{ padding: '10px' }}>
-                      <BasicLink href={basicInfo.blog}>Link</BasicLink>
+                      <BasicLink href={basicInfo.velog}>Link</BasicLink>
                     </td>
                   </tr>
                 </tbody>
