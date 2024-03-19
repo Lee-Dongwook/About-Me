@@ -19,6 +19,7 @@ export type ActivityUiProps = {
 
 export type BasicUiProps = {
   basicInfo: BasicInfo;
+  introduceInfo: IntroduceInfo;
 };
 
 export type CertificateUiProps = {

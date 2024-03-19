@@ -8,18 +8,16 @@ import type { BasicUiProps } from '@/05-ui/props.types';
 
 const Card = styled.div`
   display: flex;
-  justify-content: start;
+  justify-content: space-around;
   align-items: center;
   background-color: #f5f5f5;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
+  border-radius: 100px;
+  padding: 100px;
 `;
 
 const Content = styled.div`
-  margin-left: 20px;
-  display: flex;
-  flex-direction: column;
+  margin: 10px 0;
 `;
 
 const Name = styled.h2`
@@ -29,7 +27,7 @@ const Name = styled.h2`
 `;
 
 const Info = styled.p`
-  margin: 5px 0;
+  margin: 35px 0;
   font-size: 20px;
   color: #666;
 `;
@@ -59,7 +57,7 @@ export const BasicComponent = ({ basicInfo }: BasicUiProps) => {
           <Link href={github}>Github</Link>
         </Info>
         <Info>
-          <LinkedInIcon width={30} />
+          <LinkedInIcon href={linkedIn} width={30} />{' '}
           <Link href={linkedIn}>LinkedIn</Link>
         </Info>
         <Info>

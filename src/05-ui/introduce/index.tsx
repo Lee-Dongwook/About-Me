@@ -16,8 +16,7 @@ export const IntroduceComponent = ({
   return (
     <>
       <IntroduceCardContainer ref={firstCardRef} animate={firstCardInView}>
-        <BasicComponent basicInfo={basicInfo} />
-        <h2>Hello!</h2>
+        <BasicComponent basicInfo={basicInfo} introduceInfo={introduceInfo} />
         <br />
         {introduceInfo.introduce.map((item, index) => {
           return (
