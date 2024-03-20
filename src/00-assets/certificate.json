@@ -1,31 +1,21 @@
 [
     {
-        "key": "Furthermore",
-        "id": "",
-        "title": "Furthermore...",
-        "date": ""
-    },
-    {
         "key": "Engineer",
-        "id": "23202070821G",
         "title": "정보처리기사",
         "date": "2023-09-01"
     },
     {
         "key": "SQL",
-        "id": "SQLD-048009081",
         "title": "SQL개발자(SQLD)",
         "date": "2023-04-14"
     },
     {
         "key": "Linux",
-        "id": "LMS-2203-001679",
         "title": "리눅스마스터2급",
         "date": "2022-09-23"
     },
     {
         "key": "Computer",
-        "id": "21-K9-129737",
         "title": "컴퓨터 활용 능력 2급",
         "date": "2021-10-29"
     }

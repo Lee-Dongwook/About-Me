@@ -8,9 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
 
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 173, 216, 230;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 100, 150, 100;
 
   --primary-glow: conic-gradient(
     from 180deg at 50% 50%,
