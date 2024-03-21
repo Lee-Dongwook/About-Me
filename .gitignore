@@ -37,6 +37,7 @@ next-env.d.ts
 
 # zero install
 .yarn/*
+.pnp.*
 !.yarn/cache
 !.yarn/patches
 !.yarn/plugins
