@@ -1,4 +1,6 @@
-export const Frontend = [
+import type { ISkill } from "@/types/skill";
+
+export const Frontend: ISkill[] = [
   {
     name: "JavaScript",
     description: "ES6+ 문법을 이해하고 있고, 클로저 등을 적용해봤습니다.",
@@ -43,7 +45,7 @@ export const Frontend = [
   },
 ];
 
-export const Backend = [
+export const Backend: ISkill[] = [
   {
     name: "Node.js",
   },
@@ -58,7 +60,7 @@ export const Backend = [
   },
 ];
 
-export const DevOps = [
+export const DevOps: ISkill[] = [
   {
     name: "Github Action",
   },
@@ -70,7 +72,7 @@ export const DevOps = [
   },
 ];
 
-export const Communication = [
+export const Communication: ISkill[] = [
   {
     name: "Git/Github",
   },

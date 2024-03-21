@@ -1,4 +1,6 @@
-export const About = [
+import type { IAbout } from "@/types/about";
+
+export const About: IAbout[] = [
   {
     type: "Name",
     description: "이동욱",
