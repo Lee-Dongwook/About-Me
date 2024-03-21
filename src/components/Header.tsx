@@ -1,5 +1,6 @@
 "use client";
-import { createTheme, ThemeProvider, Toolbar } from "@mui/material";
+import { useEffect, useState } from "react";
+import { createTheme, ThemeProvider } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import ToolBar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
@@ -11,18 +12,24 @@ const pages = ["Introduce", "Work Experience", "Projects", "Skills", "Contact"];
 
 function Header() {
   const isColorNav = useColorNavStore((state) => state.isColorNav);
+  const [theme, setTheme] = useState(createTheme());
 
-  const theme = createTheme({
-    components: {
-      MuiAppBar: {
-        styleOverrides: {
-          root: {
-            backgroundColor: isColorNav ? "#ffffff" : "#dddddd",
+  useEffect(() => {
+    setTheme(
+      createTheme({
+        components: {
+          MuiAppBar: {
+            styleOverrides: {
+              root: {
+                backgroundColor: isColorNav ? "#ffffff" : "#dddddd",
+              },
+            },
           },
         },
-      },
-    },
-  });
+      })
+    );
+  }, [isColorNav]);
+
   return (
     <ThemeProvider theme={theme}>
       <AppBar>
