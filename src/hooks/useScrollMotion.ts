@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { useColorNavStore } from "./../store/useStore";
+import { useColorNavStore } from "../store/useStore";
 
 export const ScrollMotion = () => {
   const setIsColorNav = useColorNavStore((state) => state.setIsColorNav);
