@@ -1,7 +1,8 @@
-import { createTheme, ThemeProvider } from "@mui/material";
+"use client";
+import { createTheme, ThemeProvider, Toolbar } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
+import ToolBar from "@mui/material/Toolbar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { useColorNavStore } from "@/store/useStore";
@@ -25,7 +26,7 @@ function Header() {
   return (
     <ThemeProvider theme={theme}>
       <AppBar>
-        <Toolbar>
+        <ToolBar>
           <Typography variant="h5">포트폴리오</Typography>
           <Box className="nav-menu">
             {pages.map((page) => (
@@ -34,7 +35,7 @@ function Header() {
               </Button>
             ))}
           </Box>
-        </Toolbar>
+        </ToolBar>
       </AppBar>
     </ThemeProvider>
   );
