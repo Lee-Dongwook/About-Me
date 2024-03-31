@@ -1,0 +1,12 @@
+{
+    "Company": "EXEM",
+    "description": "provides databases, cloud, artificial intelligence, big data, and SaaS in performance management of all systems in the IT",
+    "Team": "Integrated Development Division Platform Team",
+    "period": "July 2023 - DEC 2023",
+    "achievement": [
+        "Initiated testing environment using Vitest, Storybook and Playwright",
+        "Reduced time for test execution by 40% by constructing End-to-End Automation Test using Playwright",
+        "Implemented changes to components by utilizing the Canvas API to apply dynamic alterations to SVG static images",
+        "Experienced in team management through the pilot introduction of Agile Kanban metodology."
+    ]
+}
