@@ -1,0 +1,6 @@
+{
+    "project": "TripPlannerZ",
+    "description": "",
+    "period": "April 2023 - Current",
+    "Tech Stack": ["React", "TypeScript", "Vite", "Yarn Workspace", "Redux toolkit", "React Query", "Tailwind CSS", "StoryBook", "Playwright"]
+}
