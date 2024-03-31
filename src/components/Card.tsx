@@ -1,17 +1,27 @@
 import React from "react";
+import PortFolio from "../assets/images/PortFolio.webp";
 
 interface CardProps {
   title: string;
   description?: string;
-  children?: React.ReactNode;
 }
 
-export const Card: React.FC<CardProps> = ({ title, description, children }) => {
+export const Card: React.FC<CardProps> = ({ title, description }) => {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg p-5 bg-whites">
-      <h2 className="text-x1 mb-2 font-semibold">{title}</h2>
-      <p className="text-gray-700 text-base">{description}</p>
-      {children}
+    <div className="flex max-w-2xl mx-auto overflow-hidden bg-white shadow-lg rounded-lg">
+      <img
+        className="flex-none w-48 h-1/2 object-cover rounded-l-lg"
+        src={PortFolio}
+        alt="Photo"
+      />
+      <div className="flex flex-col justify-between p-16 leading-normal">
+        <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          {title}
+        </h5>
+        <p className="font-normal text-gray-700 dark:text-gray-400">
+          {description}
+        </p>
+      </div>
     </div>
   );
 };
