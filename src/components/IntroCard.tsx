@@ -3,10 +3,10 @@ import PortFolio from "../assets/images/PortFolio.webp";
 
 interface CardProps {
   title: string;
-  description?: string;
+  description?: string[];
 }
 
-export const Card: React.FC<CardProps> = ({ title, description }) => {
+export const IntroCard: React.FC<CardProps> = ({ title, description }) => {
   return (
     <div className="flex max-w-2xl mx-auto overflow-hidden bg-white shadow-lg rounded-lg">
       <img
@@ -18,9 +18,15 @@ export const Card: React.FC<CardProps> = ({ title, description }) => {
         <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
           {title}
         </h5>
-        <p className="font-normal text-gray-700 dark:text-gray-400">
-          {description}
-        </p>
+        {description?.map((value) => {
+          return (
+            <>
+              <p className="font-normal text-gray-700 dark:text-gray-400">
+                {value}
+              </p>
+            </>
+          );
+        })}
       </div>
     </div>
   );

@@ -1,17 +1,20 @@
 import { Navbar } from "./components/Navbar";
-import { Card } from "./components/Card";
+import { IntroCard } from "./components/IntroCard";
 import { Footer } from "./components/Footer";
+import introduce from "./assets/data/introduce.json";
 
 function App() {
   return (
-    <div className="p-10">
+    <>
       <Navbar />
-      <Card
-        title="Hello! This is Dong Wook, Lee"
-        description="Strive to provide an improved user experience."
-      />
+      <main className="h-full">
+        <IntroCard
+          title="Hello! This is Dong Wook, Lee"
+          description={introduce.comment}
+        />
+      </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
