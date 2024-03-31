@@ -8,7 +8,7 @@ interface CardProps {
 
 export const IntroCard: React.FC<CardProps> = ({ title, description }) => {
   return (
-    <div className="flex max-w-2xl mx-auto overflow-hidden bg-white shadow-lg rounded-lg">
+    <div className="flex max-w-full mx-auto overflow-hidden bg-white shadow-lg rounded-lg">
       <img
         className="flex-none w-48 h-1/2 object-cover rounded-l-lg"
         src={PortFolio}

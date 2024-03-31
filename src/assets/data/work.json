@@ -1,7 +1,7 @@
 {
-    "Company": "EXEM",
+    "company": "EXEM",
     "description": "provides databases, cloud, artificial intelligence, big data, and SaaS in performance management of all systems in the IT",
-    "Team": "Integrated Development Division Platform Team",
+    "team": "Integrated Development Division Platform Team",
     "period": "July 2023 - DEC 2023",
     "achievement": [
         "Initiated testing environment using Vitest, Storybook and Playwright",
